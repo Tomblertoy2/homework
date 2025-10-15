@@ -1,0 +1,38 @@
+.roo {
+    font-family: "Open Sans", sans-serif;
+}
+
+.lorr h2 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+.rel h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration: line-through;
+}
+
+.toy h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+}
+.yes h3 {
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: justify;
+    font-style: italic;
+    word-spacing: 30px;
+}
+
+.goy h2 {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
