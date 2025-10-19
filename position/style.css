@@ -1,0 +1,38 @@
+body {
+    background: #000;
+}
+.lorem {
+    color: #fff;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 600px;
+}
+.block {
+    background: #fff;
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    position: fixed;
+    left: 60%;
+    bottom: 10%;
+
+    
+    
+}
+
+.ring {
+    background: #f00e0e;
+    width: 40px;
+    height: 40px;
+    border-radius: 1000px;
+    position: fixed;
+    left: 64%;
+    bottom: 12.5%;
+
+
+}
