@@ -1,4 +1,5 @@
 (function () {
+    // Бургер
     document.addEventListener('click', burderInit)
 
     function burderInit(e) {
@@ -17,7 +18,7 @@
         }
     }
 
-
+    // Модал
     const modal = document.querySelector('.modal')
     const modalButton = document.querySelector('.about__img-button')
     
@@ -37,5 +38,58 @@
             document.body.classList.remove('body--opened-modal')
         }
     }
+
+    // Табы
+
+    const tabControls = document.querySelector('.tab-control')
+
+    tabControls.addEventListener('click', toggleTab)
+
+    function toggleTab(e) {
+        const tabControl = e.target.closest('.tab-control__link')
+
+        if(!tabControl) return
+        e.preventDefault()
+        if(tabControl.classList.contains('tab-control__link--active')) return
+        
+
+        const tabContentID = tabControl.getAttribute('href')
+        const tabContent  = document.querySelector(tabContentID)
+        const activeControl = document.querySelector('.tab-control__link--active')
+        const activeContent = document.querySelector('.tab-content--show')
+
+        activeControl.classList.remove('tab-control__link--active')
+        tabControl.classList.add('tab-control__link--active')
+
+        activeContent.classList.remove('tab-content--show')
+        tabContent.classList.add('tab-content--show')
+
+    }
+
+    // Аккардион
+    const accordionLists = document.querySelectorAll('.accordion-list');
+
+    accordionLists.forEach(el => {
+        
+        el.addEventListener('click', (e) => {
+
+            const accordionControl = e.target.closest('.accordion-list__control');
+            if (!accordionControl) return
+            const accordionItem = accordionControl.parentElement;
+            const accordionContent = accordionControl.nextElementSibling;
+
+            accordionItem.classList.toggle('accordion-list__item--opened');
+
+            if (accordionItem.classList.contains('accordion-list__item--opened')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = null;
+            }
+
+        });
+
+    });
+
+
 })()
 
