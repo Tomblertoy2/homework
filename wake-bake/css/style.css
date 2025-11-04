@@ -569,7 +569,9 @@
 
 
 
-.program {}
+.program {
+    padding-bottom: 140px;
+}
 
 .program__top {
     display: flex;
