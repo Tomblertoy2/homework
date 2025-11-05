@@ -7,11 +7,11 @@
         const burderIcon = e.target.closest('.burger-icon')
         const burderNavLink = e.target.closest('.nav__link')
 
-        if(!burderIcon && !burderNavLink) return
+        if (!burderIcon && !burderNavLink) return
 
-        if(document.documentElement.clientWidth > 900) return
+        if (document.documentElement.clientWidth > 900) return
 
-        if(!document.body.classList.contains('body--opened-menu')) {
+        if (!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu')
         } else {
             document.body.classList.remove('body--opened-menu')
@@ -21,19 +21,19 @@
     // Модал
     const modal = document.querySelector('.modal')
     const modalButton = document.querySelector('.about__img-button')
-    
+
     modalButton.addEventListener('click', openModal)
     modal.addEventListener('click', closeModal)
     function openModal(e) {
         e.preventDefault()
         document.body.classList.toggle('body--opened-modal')
-        
+
     }
     function closeModal(e) {
         e.preventDefault()
 
         const target = e.target
-    
+
         if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
             document.body.classList.remove('body--opened-modal')
         }
@@ -48,13 +48,13 @@
     function toggleTab(e) {
         const tabControl = e.target.closest('.tab-control__link')
 
-        if(!tabControl) return
+        if (!tabControl) return
         e.preventDefault()
-        if(tabControl.classList.contains('tab-control__link--active')) return
-        
+        if (tabControl.classList.contains('tab-control__link--active')) return
+
 
         const tabContentID = tabControl.getAttribute('href')
-        const tabContent  = document.querySelector(tabContentID)
+        const tabContent = document.querySelector(tabContentID)
         const activeControl = document.querySelector('.tab-control__link--active')
         const activeContent = document.querySelector('.tab-content--show')
 
@@ -70,7 +70,7 @@
     const accordionLists = document.querySelectorAll('.accordion-list');
 
     accordionLists.forEach(el => {
-        
+
         el.addEventListener('click', (e) => {
 
             const accordionControl = e.target.closest('.accordion-list__control');
@@ -91,5 +91,41 @@
     });
 
 
-})()
+    // Слайдeр
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 15,
+        slidesPerView: 1.5,
+
+        pagination: {
+            el: '.gallery__pagination',
+            type: 'fraction'
+        },
+
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+
+        breakpoints: {
+            601: {
+            slidesPerView: 3,
+            },
+            801: {
+            spaceBetween: 32
+            },
+            1101: {
+            slidesPerView: 4,
+            
+            }
+        }
+
+
+
+    })
+
+
+
+}) ()
 
