@@ -44,9 +44,11 @@
     padding: 140px 0;
 }
 
+.main__testimonials,
 .main__gallery {
-    padding-bottom: 140px;
+    padding-bottom: 145px;
 }
+
 
 .container {
     max-width: 1310px;
