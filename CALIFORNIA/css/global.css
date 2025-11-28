@@ -1,0 +1,48 @@
+:root {
+
+    --second-family: "Readex Pro", sans-serif;
+}
+
+
+
+
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 1324px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+
+.button {
+    padding: 14px 53px;
+    border-radius: 50px;
+    background: #DCE5E2;
+    border: 1px solid #000;
+}
+
+.button:hover {
+    background: #fff;
+}

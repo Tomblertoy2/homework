@@ -1,0 +1,186 @@
+.header {
+    padding: 31px 0 56px 0;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.header__ul-list {
+    display: flex;
+    gap: 30px 33px;
+}
+
+.header__a-link svg {
+    margin-left: 2px;
+}
+
+.header__li-item {
+    position: relative;
+
+
+}
+
+.header__li-item:hover .drop__list {
+    display: flex;
+    flex-direction: column;
+    width: 99px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__li-item:nth-child(3) {
+    margin-right: 11px;
+}
+
+.header__a-link {}
+
+.header__label {
+    max-width: 200px;
+}
+
+.header__search {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    border: 1px solid #2a6464;
+    border-radius: 100px;
+    padding: 5px 0 5px 10px;
+    font-size: 16px;
+
+}
+
+
+.list__icons {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.item__icons {
+    padding: 8px 0 8px 13px;
+}
+
+.item__icons:first-child {
+    display: flex;
+    align-items: center;
+
+}
+
+.item__icons:nth-child(2) {
+    padding: 8px 20px 8px 0;
+}
+
+
+.drop__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    display: none;
+    z-index: 10;
+}
+
+.drop__link {
+    display: block;
+    padding: 15px 0;
+}
+
+.drop__link:first-child {
+    padding-bottom: 0;
+}
+
+
+
+
+
+.form {
+    display: none;
+
+}
+
+.open {
+    display: flex;
+    margin-left: 5px;
+    animation: ani 2.5s forwards;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.burger-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: #000;
+    position: relative;
+
+}
+
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: #000;
+    position: absolute;
+    transition: all .4s;
+
+}
+
+.burger-icon span::before {
+    top: -8px;
+
+}
+
+.burger-icon span::after {
+    bottom: -8px;
+
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0;
+    transition: all .4s;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0;
+    transition: all .4s;
+    transform: rotate(-45deg);
+}
+
