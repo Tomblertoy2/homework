@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Задача 1
+        let firstName = "Иван"; // строка с именем
+        let lastName = "Петров"; // строка с фамилией
+        let isStudent = true; // булево значение (true - является учеником курса)
+
+        // Задача 2
+        let age = 21; // возраст студента
+        let currentYear = 2025; // текущий год
+        let birthYear = currentYear - age; // вычисляем год рождения
+
+        // Задача 3Асс
+        console.log(`Меня зовут ${firstName} ${lastName}, мне ${age} лет. Я ${isStudent ? 'ученик курса Aroken' : 'не являюсь учеником курса'}.`);
+
+        // Задача 4
+        let a = '123'; // строка '123'
+        let b = +'456'; // унарный плюс преобразует строку в число 456
+        let c = Number('789'); // Number() преобразует строку в число 789
+        let d = Boolean(0); // 0 преобразуется в false
+        let e = Boolean(' '); // непустая строка (даже с пробелом) преобразуется в true
+
+        let result = a + b + c + d + e;
+        console.log(`Значение result: ${result}`); // Выводим: '1234567891'
+        console.log(`Объяснение: '123' + 456 = '123456', '123456' + 789 = '123456789', '123456789' + false = '1234567890', '1234567890' + true = '12345678901'`);
+    </script>
+</body>
+
+</html>
