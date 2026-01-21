@@ -1,0 +1,54 @@
+// Задание 1.
+const users = [
+  { name: 'Alex', age: 24, isAdmin: false },
+  { name: 'Bob', age: 13, isAdmin: false },
+  { name: 'John', age: 31, isAdmin: true },
+  { name: 'Jane', age: 20, isAdmin: false }
+];
+
+// Добавляем двух пользователей в конец массива
+users.push(
+  { name: 'Ann', age: 19, isAdmin: false },
+  { name: 'Jack', age: 43, isAdmin: true }
+);
+
+console.log(users);
+
+// Задание 2.
+function getUserAverageAge(users) {
+  if (!users.length) return 0; // защита от пустого массива
+  
+  const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+  return totalAge / users.length;
+}
+
+// Пример использования:
+console.log(getUserAverageAge(users)); // Средний возраст
+
+// Задание 3.
+function getAllAdmins(users) {
+  return users.filter(user => user.isAdmin === true);
+  // или просто: user.isAdmin
+}
+
+// Пример использования:
+console.log(getAllAdmins(users));
+
+// Задание 4.
+function first(arr, n) {
+  if (n === undefined) {
+    return arr.length > 0 ? [arr[0]] : [];
+  }
+  
+  if (n === 0) {
+    return [];
+  }
+  
+  return arr.slice(0, n);
+}
+
+// Примеры использования:
+console.log(first([1, 2, 3, 4, 5]));        // [1]
+console.log(first([1, 2, 3, 4, 5], 3));     // [1, 2, 3]
+console.log(first([1, 2, 3, 4, 5], 0));     // []
+console.log(first([], 2));                   // []
